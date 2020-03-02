@@ -1,0 +1,4 @@
+services:
+  plugin.manager.cupsofjoy:
+    class: Drupal\cups_of_joy\CupsOfJoyManager
+    parent: default_plugin_manager

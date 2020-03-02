@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains cups_of_joy.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function cups_of_joy_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the cups_of_joy module.
+    case 'help.page.cups_of_joy':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Cups of Joy Mobile Beverages!') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function cups_of_joy_theme($existing, $type, $theme, $path) {
+  return [
+    'cups_of_joy' => [
+      'variables' => ['items' => NULL],
+    ],
+  ];
+}

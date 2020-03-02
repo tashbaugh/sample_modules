@@ -1,0 +1,5 @@
+name: 'Cups of Joy'
+type: module
+description: 'Cups of Joy Mobile Beverages!'
+core: 8.x
+package: 'Custom'

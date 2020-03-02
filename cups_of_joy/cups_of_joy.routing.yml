@@ -1,0 +1,7 @@
+menu_page:
+  path: '/our-menu'
+  defaults:
+    _controller: 'Drupal\cups_of_joy\Controller\CafeMenuController::page'
+    _title: 'Our Menu'
+  requirements:
+    _permission: 'view content'

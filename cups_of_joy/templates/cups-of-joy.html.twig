@@ -1,0 +1,27 @@
+{% set module_path = _self|split('/images') %}
+
+{% for item in items %}
+<!-- #featured -->
+<aside id="featured" class="body">
+	<article>
+		<figure>
+      <img src="{{ item.imageurl }}" alt="{{ item.imagealt }}" style="width:300px;height:200px;"/>
+		</figure>
+		<hgroup>
+			<h2>{{ item.name }}</h2>
+			<h3>
+				<a href="#">{{ item.linktext }}</a>
+			</h3>
+		</hgroup>
+		<p>My Description: {{ item.description }}</p>
+		<p>Grind types available:
+    <ul>
+    {% for grindtype in item.grindtypes %}
+    <li>{{ grindtype }}</li>
+    {% endfor %}
+    </ul></p>
+		<p>SKU {{ item.sku }}</p>
+	</article>
+</aside>
+<!-- /#featured -->
+{% endfor %}
